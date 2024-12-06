@@ -22,3 +22,20 @@ body {
     font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
     position: relative;
 }
+
+button {
+    background-color: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-family: inherit;
+}
+
+button:hover {
+    background-color: var(--border);
+}
+
+a:link, a:visited {
+    color: inherit;
+}

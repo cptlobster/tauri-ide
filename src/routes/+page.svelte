@@ -13,7 +13,12 @@
 </script>
 
 <header>
-  <p>Header</p>
+  <button>File</button>
+  <button>Edit</button>
+  <!-- <button>View</button>
+  <button>Project</button>
+  <button>Terminal</button> -->
+  <button>Help</button>
 </header>
 <main class="container">
   <section class="sidebar" style="display: none;">
@@ -27,7 +32,7 @@
   </section>
 </main>
 <footer>
-  <p>Footer</p>
+  <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">you know the rules and so do I</a></p>
 </footer>
 
 <style>
@@ -41,9 +46,11 @@ main.container {
   grid-template-rows: 1fr min-content;
   flex: 1 0 100%;
 }
+
 header, footer {
   flex: 0 0 1rem;
 }
+
 section.sidebar {
   grid-area: sidebar;
   resize: horizontal;
@@ -52,10 +59,12 @@ section.sidebar {
   min-width: 200px;
   max-width: 400px;
 }
+
 section.main {
   grid-area: main;
   overflow: auto;
 }
+
 section.lower {
   grid-area: lower;
   resize: vertical;
@@ -63,6 +72,7 @@ section.lower {
 
   min-height: 200px;
 }
+
 /* styling */
 section {
   padding: 0.25rem;
@@ -72,7 +82,21 @@ section {
   align-items: stretch;
   justify-content: stretch;
 }
+
 header, footer {
-  padding: 0.25rem;
+  display: flex;
+  flex-direction: row;
+}
+
+header button {
+  border: none;
+  border-radius: 0;
+}
+
+footer a:link, footer a:visited {
+  color: var(--border);
+}
+footer a:hover {
+  color: var(--text);
 }
 </style>
